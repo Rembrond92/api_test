@@ -1,13 +1,4 @@
-import groovy.json.JsonParser;
-import io.restassured.internal.path.json.mapping.JsonObjectDeserializer;
-import io.restassured.mapper.ObjectMapper;
-import io.restassured.path.json.JsonPath;
-import netscape.javascript.JSObject;
-import org.apache.groovy.json.internal.JsonParserCharArray;
-import org.apache.logging.log4j.core.util.JsonUtils;
 import org.testng.annotations.Test;
-
-import java.io.StringReader;
 
 import static io.restassured.RestAssured.given;
 

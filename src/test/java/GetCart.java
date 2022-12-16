@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class GetCart {
+    @SuppressWarnings("rawtypes")
     public static ExtractableResponse response;
 
     @Test
@@ -20,7 +21,5 @@ public class GetCart {
                 .spec(Specification.responseSpec)
                 .body("quantity", Matchers.equalTo(count))
                 .extract();
-
-        System.out.println(response);
     }
 }
