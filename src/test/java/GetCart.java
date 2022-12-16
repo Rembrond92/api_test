@@ -13,13 +13,13 @@ public class GetCart {
     @Parameters("count")
     public void testCartWithProduct(int count) {
         response =
-        given()
-                .spec(Specification.requestSpec)
-                .auth().oauth2(Authorization.token)
-                .when().get("cart")
-                .then()
-                .spec(Specification.responseSpec)
-                .body("quantity", Matchers.equalTo(count))
-                .extract();
+                given()
+                        .spec(Specification.requestSpec)
+                        .auth().oauth2(Authorization.token)
+                        .when().get("cart")
+                        .then()
+                        .spec(Specification.responseSpec)
+                        .body("quantity", Matchers.equalTo(count))
+                        .extract();
     }
 }
