@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test_adamas">
+    <test name="Authorization and empty cart"><classes>
+        <class name="Authorization"/>
+        <class name="GetCart">
+            <parameter name="count"  value='0' />
+        </class>
+    </classes></test>
+    <test name="Adding an product to the cart"><classes>
+        <class name="MainPage"/>
+        <class name="PopularProducts"/>
+        <class name="ToCart"/>
+        <class name="GetCart">
+            <parameter name="count"  value='1' />
+        </class>
+    </classes></test>
+    <test name="Delete product and empty cart"><classes>
+        <class name="DeleteProductFromCart"/>
+        <class name="GetCart">
+            <parameter name="count"  value='0' />
+        </class>
+    </classes></test>
+</suite>
