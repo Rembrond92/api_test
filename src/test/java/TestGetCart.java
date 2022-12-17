@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class GetCart {
+public class TestGetCart {
     @SuppressWarnings("rawtypes")
     public static ExtractableResponse response;
 
@@ -17,7 +17,7 @@ public class GetCart {
         response =
                 given()
                         .spec(Specification.requestSpec)
-                        .auth().oauth2(Authorization.token)
+                        .auth().oauth2(TestAuthorization.token)
                         .when().get("cart")
                         .then()
                         .spec(Specification.responseSpec)

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class MainPage {
+public class TestMainPage {
     public static int id;
 
     @Test
@@ -13,7 +13,7 @@ public class MainPage {
         id =
                 given()
                         .spec(Specification.requestSpec)
-                        .auth().oauth2(Authorization.token)
+                        .auth().oauth2(TestAuthorization.token)
                         .when().get("main")
                         .then()
                         .spec(Specification.responseSpec)

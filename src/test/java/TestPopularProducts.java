@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class PopularProducts {
+public class TestPopularProducts {
     public static int offer_id;
 
     @Test(dependsOnMethods = "test.java.MainPage.testMainPage")
@@ -13,8 +13,8 @@ public class PopularProducts {
         offer_id =
                 given()
                         .spec(Specification.requestSpec)
-                        .auth().oauth2(Authorization.token)
-                        .when().get("products/" + MainPage.id)
+                        .auth().oauth2(TestAuthorization.token)
+                        .when().get("products/" + TestMainPage.id)
                         .then()
                         .spec(Specification.responseSpec)
                         .body("meta.description", Matchers.containsString("Заказать с быстрой доставкой по России!"))

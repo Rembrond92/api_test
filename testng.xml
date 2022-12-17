@@ -2,22 +2,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="test_adamas">
     <test name="Authorization and empty cart"><classes>
-        <class name="test.java.Authorization"/>
-        <class name="test.java.GetCart">
+        <class name="test.java.TestAuthorization"/>
+        <class name="test.java.TestGetCart">
             <parameter name="count"  value='0' />
         </class>
     </classes></test>
     <test name="Adding an product to the cart"><classes>
-        <class name="test.java.MainPage"/>
-        <class name="test.java.PopularProducts"/>
-        <class name="test.java.ToCart"/>
-        <class name="test.java.GetCart">
+        <class name="test.java.TestMainPage"/>
+        <class name="test.java.TestPopularProducts"/>
+        <class name="test.java.TestToCart"/>
+        <class name="test.java.TestGetCart">
             <parameter name="count"  value='1' />
         </class>
     </classes></test>
     <test name="Delete product and empty cart"><classes>
-        <class name="test.java.DeleteProductFromCart"/>
-        <class name="test.java.GetCart">
+        <class name="test.java.TestDeleteProductFromCart"/>
+        <class name="test.java.TestGetCart">
             <parameter name="count"  value='0' />
         </class>
     </classes></test>

@@ -8,11 +8,11 @@ import io.restassured.specification.ResponseSpecification;
 
 public class Specification {
 
-    public static RequestSpecification requestSpec = new RequestSpecBuilder()
+    public static final RequestSpecification requestSpec = new RequestSpecBuilder()
             .setBaseUri("https://rest.adamas.ru/v1")
             .build();
 
-    public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
+    public static final ResponseSpecification responseSpec = new ResponseSpecBuilder()
             .expectStatusCode(200)
             .expectContentType(ContentType.JSON)
             .build();

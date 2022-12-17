@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class Authorization {
+public class TestAuthorization {
     public static String token;
 
     @Test
