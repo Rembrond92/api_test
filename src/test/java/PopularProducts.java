@@ -1,3 +1,5 @@
+package test.java;
+
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
@@ -6,7 +8,7 @@ import static io.restassured.RestAssured.given;
 public class PopularProducts {
     public static int offer_id;
 
-    @Test(dependsOnMethods = "MainPage.testMainPage")
+    @Test(dependsOnMethods = "test.java.MainPage.testMainPage")
     public void testPopularProducts() {
         offer_id =
                 given()

@@ -1,3 +1,5 @@
+package test.java;
+
 import io.restassured.response.ExtractableResponse;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Parameters;
