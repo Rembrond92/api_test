@@ -1,10 +1,12 @@
+package test.java;
+
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
 public class ToCart {
 
-    @Test(dependsOnMethods = "PopularProducts.testPopularProducts")
+    @Test(dependsOnMethods = "test.java.PopularProducts.testPopularProducts")
     public void testToCart() {
         given()
                 .spec(Specification.requestSpec)
