@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.given;
 
 public class TestToCart {
 
-    @Test(dependsOnMethods = "test.java.PopularProducts.testPopularProducts")
+    @Test(dependsOnMethods = "test.java.TestPopularProducts.testPopularProducts")
     public void testToCart() {
         given()
                 .spec(Specification.requestSpec)

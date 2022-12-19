@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 public class TestPopularProducts {
     public static int offer_id;
 
-    @Test(dependsOnMethods = "test.java.MainPage.testMainPage")
+    @Test(dependsOnMethods = "test.java.TestMainPage.testMainPage")
     public void testPopularProducts() {
         offer_id =
                 given()
